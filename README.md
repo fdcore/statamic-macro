@@ -16,27 +16,35 @@ Usage
 
 For example create macros "my_block":
 
-  {{ macro name="my_block" }}
-    <div class="block">{{ text }}</div>
-  {{ /macro }}
+```
+{{ macro name="my_block" }}
+  <div class="block">{{ text }}</div>
+{{ /macro }}
+```
 
 Execute macros:
 
-  {{ macro:my_block text="It Works!" }}
+```
+{{ macro:my_block text="It Works!" }}
+```
 
 You can use any params in execute macros.
 
 Also you can use the tag pair.
 
-  {{ macro name="my_pair_block" }}
-    <div class="block">
-      <h2>{{ text }}</h2>
-      <p>{{ content }}</p>
-    </div>
-  {{ /macro }}
+```
+{{ macro name="my_pair_block" }}
+  <div class="block">
+    <h2>{{ text }}</h2>
+    <p>{{ content }}</p>
+  </div>
+{{ /macro }}
+```
 
 Use pair tag:
 
-  {{ macro:my_pair_block text="Cool" }}
-      Very powerfull!  
-  {{ /macro:my_pair_block }}
+```
+{{ macro:my_pair_block text="Cool" }}
+    Very powerfull!  
+{{ /macro:my_pair_block }}
+```
