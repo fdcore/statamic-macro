@@ -5,8 +5,8 @@ class Plugin_macro extends Plugin
   var $meta = array(
     'name'       => 'Macro',
     'version'    => '0.1',
-    'author'     => 'Nyashkin',
-    'author_url' => 'http://fdcore.com'
+    'author'     => 'Dmitriy Nyashkin',
+    'author_url' => 'http://nyashk.in'
   );
   
   var $cached = array();

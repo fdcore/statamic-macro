@@ -35,7 +35,7 @@ Also you can use the tag pair.
 ```
 {{ macro name="my_pair_block" }}
   <div class="block">
-    <h2>{{ text }}</h2>
+    <h2>{{ title }}</h2>
     <p>{{ content }}</p>
   </div>
 {{ /macro }}
@@ -44,7 +44,7 @@ Also you can use the tag pair.
 Use pair tag:
 
 ```
-{{ macro:my_pair_block text="Cool" }}
+{{ macro:my_pair_block title="Cool" }}
     Very powerfull!  
 {{ /macro:my_pair_block }}
 ```
