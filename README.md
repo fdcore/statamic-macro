@@ -48,3 +48,16 @@ Use pair tag:
     Very powerfull!  
 {{ /macro:my_pair_block }}
 ```
+
+Macros in partials
+----------
+
+You can put your macros in partials file. For access macros in partials, just use standart tag {{ theme:partial }}.
+
+For example, macros in file partials/macros.html
+
+```
+{{ theme:partial src="macros" }}
+{{ macro:company active="{ segment_1 }" }}
+```
+

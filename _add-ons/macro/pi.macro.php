@@ -4,7 +4,7 @@ class Plugin_macro extends Plugin
 {
   var $meta = array(
     'name'       => 'Macro',
-    'version'    => '0.1',
+    'version'    => '0.2',
     'author'     => 'Dmitriy Nyashkin',
     'author_url' => 'http://nyashk.in'
   );
@@ -13,12 +13,12 @@ class Plugin_macro extends Plugin
   
   public function index(){
    $name = $this->fetchParam("name");   
-   $this->session->set($name, $this->content);
+   $this->blink->set($name, $this->content);
   }
   
   public function __call($name, $arguments) {
       
-      $content = $this->session->get($name);
+      $content = $this->blink->get($name);
       
       if($content){
         if($this->content) $this->attributes['content'] = $this->content;
