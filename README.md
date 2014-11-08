@@ -1,5 +1,5 @@
 Macro
-==============
+=====
 
 Create small functions in template. Simple but powerful plugin!
 
@@ -7,14 +7,14 @@ Create small functions in template. Simple but powerful plugin!
 
 Installing
 ----------
-1. Drop the add-ons/macro folder into the /_add-ons/ folder.
+1. Drop the **\_add-ons/macro** folder into the **/\_add-ons/** folder.
 2. Use in template.
 
 
 Usage
 -----
 
-For example create macros "my_block":
+### For example create macros **"my_block"**:
 
 ```html
 {{ macro name="my_block" }}
@@ -22,7 +22,7 @@ For example create macros "my_block":
 {{ /macro }}
 ```
 
-Execute macros {{ macro:* }}:
+### Execute macros {{ macro:* }}:
 
 ```
 {{ macro:my_block text="It Works!" }}
@@ -43,11 +43,11 @@ Also you can use the tag pair.
 
 If macros is not created, then tag `{{ macro:* }}` return content in pair tag.
 
-Use pair tag:
+### Use pair tag:
 
 ```
 {{ macro:my_pair_block title="Cool" }}
-    Very powerfull!  
+    Very powerful!
 {{ /macro:my_pair_block }}
 ```
 Set parameter use_context to «true» if you need use global tags scope.
@@ -55,7 +55,7 @@ Set parameter use_context to «true» if you need use global tags scope.
 ```html
 {{ macro:my_pair_block use_context=«»true }}
     <h1>{{ title }}</h1>
-		<p>{{ content }}</p> 
+		<p>{{ content }}</p>
 {{ /macro:my_pair_block }}
 ```
 
@@ -63,9 +63,9 @@ Set parameter use_context to «true» if you need use global tags scope.
 Macros in partials
 ------------------
 
-You can put your macros in partials file. For access macros in partials, just use default tag {{ theme:partial }}.
+You can put your macros in partials file. For access macros in partials, just use default tag **{{ theme:partial }}**.
 
-For example, macros in file partials/macros.html
+For example, macros in file **partials/macros.html**.
 
 ```
 {{ theme:partial src="macros" }}
