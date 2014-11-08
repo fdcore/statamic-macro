@@ -4,16 +4,14 @@ class Plugin_macro extends Plugin
 {
   var $meta = array(
     'name'       => 'Macro',
-    'version'    => '0.3',
-    'author'     => 'Nyashkin',
+    'version'    => '0.4',
+    'author'     => 'Dmitriy Nyashkin',
     'author_url' => 'http://fdcore.com'
   );
-  
-  var $cached = array();
-  
+    
   public function index(){
-   $name = $this->fetchParam("name");   
-   $this->blink->set($name, $this->content);
+      $name = $this->fetchParam("name");   
+      $this->blink->set($name, $this->content);
   }
   
   function __call($name, $arguments) {
@@ -30,6 +28,9 @@ class Plugin_macro extends Plugin
         }
         $content = Parse::contextualTemplate($content, $this->attributes, $this->context);
         return $content;
+      } else {
+        // return default pair content
+        return $this->content;
       }
   }
   
