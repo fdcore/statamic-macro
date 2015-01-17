@@ -75,7 +75,7 @@ For example, macros in file **partials/macros.html**.
 From template to layout
 -----------------------
 
-Sometimes it is necessary to send data from remplate to the layout.
+Sometimes it is necessary to send data from template to the layout.
 
 ### Example:
 
